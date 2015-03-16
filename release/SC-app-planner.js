@@ -27,7 +27,7 @@ angular.module('SC-app-planner')
     $scope.$on('$stateChangeSuccess', function() {
       
       /* jshint ignore:start */
-      $http.get('bower_components/SC-app-planner/release/assets/sched/sched-embed.js')
+      $http.get('assets/sched/sched-embed.js')
         .then(function(response) {
 
           eval(response.data);
