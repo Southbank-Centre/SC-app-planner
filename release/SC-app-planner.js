@@ -8,7 +8,8 @@
  * Provides the app with the ability to display planner content and features
  */
 angular
-  .module('SC-app-planner', []);;'use strict';
+  .module('SC-app-planner', []);;/* jshint ignore:start */
+// 'use strict'; -- Sched embed doesn't support strict mode so we can't use it in this app
 
 /**
  * @ngdoc controller
@@ -26,15 +27,15 @@ angular.module('SC-app-planner')
 
     $scope.$on('$stateChangeSuccess', function() {
       
-      /* jshint ignore:start */
+      
       $http.get('assets/sched/sched-embed.js')
         .then(function(response) {
 
           eval(response.data);
 
         });
-      /* jshint ignore:end */
 
     });
 
   }]);
+/* jshint ignore:end */

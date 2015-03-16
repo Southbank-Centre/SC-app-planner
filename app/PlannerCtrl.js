@@ -1,4 +1,5 @@
-'use strict';
+/* jshint ignore:start */
+// 'use strict'; -- Sched embed doesn't support strict mode so we can't use it in this app
 
 /**
  * @ngdoc controller
@@ -16,15 +17,15 @@ angular.module('SC-app-planner')
 
     $scope.$on('$stateChangeSuccess', function() {
       
-      /* jshint ignore:start */
+      
       $http.get('assets/sched/sched-embed.js')
         .then(function(response) {
 
           eval(response.data);
 
         });
-      /* jshint ignore:end */
 
     });
 
   });
+/* jshint ignore:end */
