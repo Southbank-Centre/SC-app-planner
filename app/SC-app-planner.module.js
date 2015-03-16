@@ -8,4 +8,4 @@
  * Provides the app with the ability to display planner content and features
  */
 angular
-  .module('SC-app-planner');
+  .module('SC-app-planner', []);
