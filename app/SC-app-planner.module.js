@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict'; -- Sched embed doesn't support strict mode so we can't use it in this app
 
 /**
  * @ngdoc overview
