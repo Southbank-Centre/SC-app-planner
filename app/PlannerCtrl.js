@@ -20,6 +20,8 @@ angular.module('SC-app-planner')
       $http.get('bower_components/SC-app-planner/release/assets/sched/sched-embed.js')
         .then(function(response) {
 
+          response.data.replace("var confurl = '';", "var confurl = '" + schedPlannerShortname + ".sched.org';");
+
           eval(response.data);
 
         });

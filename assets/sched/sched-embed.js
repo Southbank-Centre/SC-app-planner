@@ -40,7 +40,7 @@ ni.setAttribute('id', 'sched-iframe');
 ni.appendChild(nis);
 elink.parentNode.insertBefore(ni, elink.nextSibling);
 elink.style.display = 'none';
-var confurl = 'wowldn2015.sched.org';
+var confurl = '';
 
 var np = getPage(elink.getAttribute('href'));
 var nw = (elink.getAttribute('data-sched-width')) ? parseInt(elink.getAttribute('data-sched-width')) : '100%';
